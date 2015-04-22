@@ -1,0 +1,182 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Vikram Bhasin, Vincent Ning, Sumeet Babu, Adam Gauthier">
+    <title>Everything Spartan</title>
+    <meta name="author" content="Vikram Bhasin">
+    <meta name="description" content="Information about the Original Halo Triology">
+    <meta name="viewport" content="width=device-width">
+    <link href="/static/api/media/favicon.ico" rel="icon">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/api/css/ripples.min.css" rel="stylesheet">
+    <link href="/static/api/css/index.css" rel="stylesheet">
+    <link href="/static/api/css/material-fullpalette.min.css" rel="stylesheet">
+    <link media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="/static/api/css/mobilecss/mobile_index.css" rel="stylesheet">
+    <link href="https://cs4730.cs.virginia.edu/stylesheets/screen.css" rel="stylesheet">
+    <meta name="google-site-verification" content="fu-ZeJw83Nu3osmr_dDGznMfEAzfonk5IcFFY3gLx2w" />
+ </head>
+
+<div class="pagewrapper">
+    <div class="navbar navbar-material-blue-900">
+      <div class="container">
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          <a class="navbar-brand" href="/">Everything Spartan</a>
+      </div>
+      <div class="navbar-collapse collapse navbar-inverse-collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li class="active"><a href="/">Home</a></li>
+              <li><a href="/levels">Levels</a></li>
+              <li><a href="/characters">Characters</a></li>
+              <li><a href="/weapons">Weapons</a></li>
+              <li><a href="/vehicles">Vehicles</a></li>
+              <li><a href="/games">Games</a></li>
+              <li><a href="/gamemodes">Game Modes</a></li>
+              <li><a href="/achievements">Achievements</a></li>
+              <form class="navbar-form navbar-right">
+                <input type="text" class="form-control col-lg-8" placeholder="Search">
+              </form>
+          </ul>
+      </div>
+      </div>
+  </div>
+  <br> </br>
+
+<div class="hero" id="home" style="background-image: url('/static/api/media/Halo-4-Wallpaper.png')">
+  <div class="grid-wrapper">
+    <div class="grid flex">
+      <div class="grid__item flex__item two-fifths palm-one-whole avatar">
+      </div>
+    <div class="grid__item flex__item three-fifths palm-one-whole">
+    <h1><center>Everything Spartan: A Comprehensive Halo Wiki </center></h1>
+  <hr>
+ <p class="lead">
+  Welcome Spartans and Elites! Everything Spartan is a comprehensive collaborative database, containing a bounty of information on the Halo universe. Levels, Maps, characters, anything Halo we've got it! Anyone can add and edit content once they register as a user. This project was created for CS 4750, <i>Database Systems</i> at the University of Virginia. It is maintained and run by a team of hardcore Halo fans just like you. Enjoy the site!
+ </p>
+<button type="button" onclick="changeHomePic()" class="btn btn-material-blue-900">Change Image</button>
+    </div>
+  </div>
+  </div>
+</div>
+
+  <body>
+         <div class="panel panel-material-blue-900">
+            <div class="panel-heading">
+                <h3 class="panel-title"><center> Halo 5 Trailers </center></h3>
+            </div>
+            <div class="panel-body">
+              <center>
+              <h4>
+                The two live-action trailers for Halo 5: Guardians. Which side will you choose, Spartan Locke or Masterchief? #HUNTtheTRUTH
+		</h4>
+		<h4>
+		<u>Countdown to Halo 5 release on October 27th, 2015</u>
+		<strong><p id="countdown-holder"></p></strong>  
+		<script src="http://people.virginia.edu/~vb8nd/countdown.js"></script>  
+		<script>
+    		var clock = document.getElementById("countdown-holder"), targetDate = new Date(2015, 09, 27);
+    		clock.innerHTML = countdown(targetDate ).toString(); 
+   		setInterval(function(){ clock.innerHTML = countdown(targetDate).toString();}, 1000);
+  		</script>
+              </h4>
+              <div class="row">
+                <div class="col-md-6">
+                  <iframe width="560" height="340"
+                  src="https://www.youtube.com/embed/WCZWQSjEv-o" frameborder="" allowfullscreen
+                  autohide="1"
+                  modestbranding="1">
+                  </iframe>
+                </div>
+                <div class="col-md-6">
+                  <iframe width="560" height="340"
+                  src="https://www.youtube.com/embed/Ht7pwc_LIrc" frameborder="" allowfullscreen
+                  autohide="1"
+                  modestbranding="1">
+                  </iframe>
+                </div>
+              </div>
+              </center>
+            </div>
+        </div>
+
+        <div class="panel panel-material-blue-900">
+           <div class="panel-heading">
+               <h3 class="panel-title"><center>Twitter Feed</center></h3>
+           </div>
+           <div class="panel-body">
+             <center>
+             <div class="row">
+               <div class="col-md-6">
+                <h3>@Halo</h3>
+                 <a class="twitter-timeline"
+                 width="1500"
+                 height="600"
+                 href="https://twitter.com/Halo"
+                 data-widget-id="587772832379199490">@Halo</a>
+                 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+                 </script>
+               </div>
+               <div class="col-md-6">
+                 <h3>#HUNTtheTRUTH: The Halo Ad Campaign</h3>
+                 <a class="twitter-timeline"
+                 width="1500"
+                 height="600"
+                 href="https://twitter.com/hashtag/HUNTtheTRUTH"
+                 data-widget-id="587778255043878912">#HUNTtheTRUTH</a>
+                 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");
+                 </script>
+               </div>
+             </div>
+             </center>
+           </div>
+       </div>
+
+
+ <div class="footer">
+  <div class="well">
+        <div class="row">
+            <div class="col-md-5">
+                <p class="text-muted">
+                © 2015 by Vikram Bhasin, Vincent Ning,
+                Sumeet Babu, Adam Gauthier
+                </p>
+            </div>
+            <div class="col-md-2">
+            <a href="/"><img src="/static/api/media/logo.png"></a>
+            </div>
+            <div class="col-md-5">
+            <p class="links">
+              <a href="/">Home</a> | <a href="/levels">Levels</a> | <a href="/characters">Characters</a> | <a href="/weapons">Weapons</a> | <a href="/vehicles">Vehicles</a> | <a href="/games">Games</a> | <a href="/gamemodes">Game Modes</a> | <a href="/achievements">Achievements</a>
+            </p>
+                </div>
+            </div>
+        </div>
+    </div>
+ </div>
+
+<!--javascript code-->
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<!-- AJAX -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+<script src="/static/api/js/ripples.min.js"></script>
+<script src="/static/api/js/material.min.js"></script>
+<script>
+   $(document).ready(function() {
+     $.material.init();
+ });
+</script>
+<script>
+   function changeHomePic(){
+		document.getElementById("home").style = ""background-image: url('/static/api/media/logo.png')"";
+   }
+</script>
+</body>
+</div>
+</html>

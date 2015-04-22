@@ -1,0 +1,145 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Vikram Bhasin, Vincent Ning, Sumeet Babu, Adam Gauthier">
+    <title>Everything Spartan | Vehicles</title>
+    <meta name="author" content="Vikram Bhasin">
+    <meta name="description" content="Information about the Original Halo Triology">
+    <meta name="viewport" content="width=device-width">
+    <link href="/static/api/media/favicon.ico" rel="icon">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/static/api/css/ripples.min.css" rel="stylesheet">
+    <link href="/static/api/css/index.css" rel="stylesheet">
+    <link href="/static/api/css/material-fullpalette.min.css" rel="stylesheet">
+    <link media="handheld, only screen and (max-width: 480px), only screen and (max-device-width: 480px)" href="/static/api/css/mobilecss/mobile_index.css" rel="stylesheet">
+    <link href="https://cs4730.cs.virginia.edu/stylesheets/screen.css" rel="stylesheet">
+ </head>
+
+<div class="pagewrapper">
+    <div class="navbar navbar-material-blue-900">
+      <div class="container">
+      <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          <a class="navbar-brand" href="/">Everything Spartan</a>
+      </div>
+      <div class="navbar-collapse collapse navbar-inverse-collapse">
+          <ul class="nav navbar-nav navbar-right">
+              <li><a href="/">Home</a></li>
+              <li><a href="/levels">Levels</a></li>
+              <li><a href="/characters">Characters</a></li>
+              <li><a href="/weapons">Weapons</a></li>
+              <li class="active"><a href="/vehicles">Vehicles</a></li>
+              <li><a href="/games">Games</a></li>
+              <li><a href="/gamemodes">Game Modes</a></li>
+              <li><a href="/achievements">Achievements</a></li>
+          </ul>
+      </div>
+      </div>
+  </div>
+
+<div class="well">
+  <center>
+  <h1>Vehicles</h1>
+  </center>
+
+{% if vehicle_list %}
+  <table class="table table-striped table-hover">
+  <tr>
+    <th>#</th>
+    <th>Name</th>
+    <th>Model</th>
+    <th>Class</th>
+    <th>Number of Users</th>
+  </tr>
+  {% for vehicle in vehicle_list %}
+  <tr>
+    <td><a href="/vehicles/{{vehicle.id}}/edit/"><b>Vehicle {{ vehicle.id}}:</b></a></td>
+    <td>{{ vehicle.name }}</td>
+    <td>{{ vehicle.model }}</td>
+    <td>{{ vehicle.vclass  }}</td>
+    <td>{{ vehicle.num_users  }}</td>
+  </tr>
+    {% endfor %}
+    </table>
+    </center>
+  {% else %}
+    <div align="center"> I guess there are no weapons </div>
+  {% endif %}
+
+<div class="list-group"> 
+  <form action="/vehicles/create/" class="form-horizontal" method="post">
+  {% csrf_token %}
+        <legend>Create a New Vehicle:</legend>
+        <div class="form-group">
+            <label for="inputName" class="col-lg-2 control-label">Name</label>
+            <div class="col-lg-6">
+                <input type="text" name="name" class="form-control" id="" placeholder="Name" value="" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputLocation" class="col-lg-2 control-label">Model</label>
+            <div class="col-lg-6">
+                <input type="text" name="model" class="form-control" id="" placeholder="Model" value="" />
+      </div>
+  </div>
+        <div class="form-group">
+            <label for="inputLocation" class="col-lg-2 control-label">Class</label>
+            <div class="col-lg-6">
+                <input type="text" name="vclass" class="form-control" id="" placeholder="Class" value="" />
+      </div>
+  </div>
+       <div class="form-group">
+            <label for="inputLocation" class="col-lg-2 control-label">Number of Users</label>
+            <div class="col-lg-6">
+                <input type="text" name="num_users" class="form-control" id="" placeholder="Number of Users" value="" />
+      </div>
+  </div>
+  </div>
+  <center>
+  <button type="submit" value="Enter" class="btn btn-material-blue-900">Submit</button>
+  </center>   
+</form>   
+</div>
+
+ <div class="footer">
+  <div class="well">
+        <div class="row">
+            <div class="col-md-5">
+                <p class="text-muted">
+                © 2015 by Vikram Bhasin, Vincent Ning,
+                Sumeet Babu, Adam Gauthier
+                </p>
+            </div>
+            <div class="col-md-2">
+            <a href="/"><img src="/static/api/media/logo.png"></a>
+            </div>
+            <div class="col-md-5">
+            <p class="links">
+            <a href="/">Home</a> | <a href="/levels">Levels</a> | <a href="/characters">Characters</a> | <a href="/weapons">Weapons</a> | <a href="/vehicles">Vehicles</a> | <a href="/games">Games</a> | <a href="/gamemodes">Game Modes</a> | <a href="/achievements">Achievements</a>
+            </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+ </div>
+ </div>
+
+<!--javascript code-->
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="/static/api/js/ripples.min.js"></script>
+<script src="/static/api/js/material.min.js"></script>
+<script>
+   $(document).ready(function() {
+     $.material.init();
+ });
+</script>
+</body>
+</div>
+</html>

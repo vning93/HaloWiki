@@ -1,0 +1,27 @@
+Strong entities
+	character(NAME,current_status,home_world,gender,birth_date)
+	map(NAME,location)
+	weapon(NAME,firing_mode,damage_level,dual_wield)
+	vehicle(NAME,model,vclass,num_users)
+	game(NAME,year,developer,publisher,rating,platform)
+	game_mode(NAME,multi_player,emblem)
+	achievement(NAME,criteria,emblem)
+Relations
+	Weapon_Usable_On_Map(weapon,map) many to many
+	Vehicle_Usable_On_Map(vehicle,map) many to many
+	Game_Mode_Playable_On_Map(game_mode,map) many to many
+	Game_Playable_Game_Mode(game,game_mode) many to many
+	Character_Appear_In_Game(character,game) many to many
+	Achievement_Unlockable_In_Game(achievement,game) many-to-many
+	
+Specialty Commands
+trigger
+constraint
+
+—
+
+Derived Fields
+	map(weapons, vehicles, game_modes)
+	game(game_modes, characters, achievements)
+
+	
