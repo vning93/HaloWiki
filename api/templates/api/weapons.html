@@ -71,6 +71,8 @@
     <div align="center"> I guess there are no weapons </div>
   {% endif %}
 
+  {{weapons_above_avg}}
+
   <div class="list-group"> 
   <form action="/weapons/create/" class="form-horizontal" method="post">
   {% csrf_token %}

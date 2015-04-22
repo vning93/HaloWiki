@@ -1,3 +1,7 @@
+.hero {
+	background-image: url('/static/api/media/Halo-4-Wallpaper.png');
+}
+
 .twitter-timeline{
 	text-align: center;
 }

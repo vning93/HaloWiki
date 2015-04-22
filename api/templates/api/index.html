@@ -44,7 +44,7 @@
   </div>
   <br> </br>
 
-<div class="hero" id="home" style="background-image: url('/static/api/media/Halo-4-Wallpaper.png')">
+<div class="hero" id="home">
   <div class="grid-wrapper">
     <div class="grid flex">
       <div class="grid__item flex__item two-fifths palm-one-whole avatar">
@@ -55,7 +55,20 @@
  <p class="lead">
   Welcome Spartans and Elites! Everything Spartan is a comprehensive collaborative database, containing a bounty of information on the Halo universe. Levels, Maps, characters, anything Halo we've got it! Anyone can add and edit content once they register as a user. This project was created for CS 4750, <i>Database Systems</i> at the University of Virginia. It is maintained and run by a team of hardcore Halo fans just like you. Enjoy the site!
  </p>
-<button type="button" onclick="changeHomePic()" class="btn btn-material-blue-900">Change Image</button>
+ <center>
+  <button type="button" onclick="changeHomePic()" class="btn btn-material-blue-900">Change Image</button>
+</center>
+<script>
+   function changeHomePic(){
+    var url = document.getElementById("home").style.backgroundImage;
+    if (url == 'url(http://ec2-52-4-17-49.compute-1.amazonaws.com/static/api/media/halo_3-HD.png)') {
+      document.getElementById("home").style.backgroundImage = 'url(/static/api/media/Halo-4-Wallpaper.png)';
+    }
+    else {
+      document.getElementById("home").style.backgroundImage = 'url(/static/api/media/halo_3-HD.png)';
+    }
+   }
+</script>
     </div>
   </div>
   </div>
@@ -168,11 +181,6 @@
    $(document).ready(function() {
      $.material.init();
  });
-</script>
-<script>
-   function changeHomePic(){
-		document.getElementById("home").style = ""background-image: url('/static/api/media/logo.png')"";
-   }
 </script>
 </body>
 </div>
